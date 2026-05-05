@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-label="W1D3 project structure">
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10" fill="none" stroke="#111827" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="720" fill="#fffdf7"/>
+  <g font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" fill="#1f2937">
+    <text x="70" y="72" font-size="34" font-weight="700">Project Structure and Responsibilities</text>
+    <text x="72" y="106" font-size="18" fill="#64748b">A small folder, but each file has a clear job.</text>
+
+    <g transform="translate(90 156)">
+      <path d="M8 8 C112 0, 370 0, 482 8 C500 9, 512 24, 514 42 C522 169, 520 384, 510 502 C508 522, 492 535, 473 537 C356 545, 112 543, 24 536 C8 534, 0 519, 2 499 C-4 364, -3 143, 8 8Z" fill="#f8fafc" stroke="#111827" stroke-width="2.4"/>
+      <text x="34" y="56" font-size="26" font-weight="700">W1D3/</text>
+      <text x="62" y="105" font-size="22">app.py</text>
+      <text x="62" y="160" font-size="22">README.md</text>
+      <text x="62" y="215" font-size="22">TECHNICAL_DETAILS.md</text>
+      <text x="62" y="270" font-size="22">templates/</text>
+      <text x="100" y="318" font-size="22">index.html</text>
+      <text x="62" y="373" font-size="22">diagrams/</text>
+      <text x="100" y="421" font-size="20">excalidraw-*.svg</text>
+    </g>
+
+    <g transform="translate(690 160)">
+      <path d="M6 8 C88 0, 323 0, 423 8 C441 10, 452 22, 454 40 C460 87, 459 131, 451 173 C448 190, 435 201, 418 202 C308 208, 104 206, 23 199 C8 198, 0 184, 2 166 C-3 120, -1 49, 6 8Z" fill="#dcfce7" stroke="#111827" stroke-width="2.4"/>
+      <text x="32" y="56" font-size="24" font-weight="700">Backend responsibility</text>
+      <text x="32" y="96" font-size="17">Routes, API key loading, model calls, JSON responses.</text>
+      <text x="32" y="132" font-size="16" fill="#475569">Owned by app.py</text>
+    </g>
+
+    <g transform="translate(690 388)">
+      <path d="M6 8 C88 0, 323 0, 423 8 C441 10, 452 22, 454 40 C460 87, 459 131, 451 173 C448 190, 435 201, 418 202 C308 208, 104 206, 23 199 C8 198, 0 184, 2 166 C-3 120, -1 49, 6 8Z" fill="#dbeafe" stroke="#111827" stroke-width="2.4"/>
+      <text x="32" y="56" font-size="24" font-weight="700">Frontend responsibility</text>
+      <text x="32" y="96" font-size="17">Chat UI, input handling, fetch(), rendering bubbles.</text>
+      <text x="32" y="132" font-size="16" fill="#475569">Owned by templates/index.html</text>
+    </g>
+
+    <path d="M574 257 C608 241, 643 235, 687 249" fill="none" stroke="#111827" stroke-width="2.4" marker-end="url(#arrow)"/>
+    <path d="M574 475 C609 492, 643 496, 687 489" fill="none" stroke="#111827" stroke-width="2.4" marker-end="url(#arrow)"/>
+  </g>
+</svg>

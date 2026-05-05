@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-label="W1D3 chat demo overall architecture">
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10" fill="none" stroke="#1f2937" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <filter id="paper">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="table" tableValues="0 0.035"/>
+      </feComponentTransfer>
+      <feBlend in="SourceGraphic" mode="multiply"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="720" fill="#fffdf7"/>
+  <rect width="1200" height="720" fill="#fffdf7" filter="url(#paper)"/>
+  <g font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" fill="#1f2937">
+    <text x="70" y="72" font-size="34" font-weight="700">W1D3 Chat Demo: Overall Architecture</text>
+    <text x="72" y="106" font-size="18" fill="#64748b">Browser sends a message, Flask routes it, OpenAI generates the answer.</text>
+
+    <g transform="translate(74 185)">
+      <path d="M5 6 C98 -2, 237 1, 323 8 C336 9, 346 18, 347 33 C351 106, 350 198, 343 266 C342 282, 331 294, 315 296 C234 303, 91 301, 21 294 C8 293, 0 281, 1 265 C-3 188, -1 83, 5 6Z" fill="#e0f2fe" stroke="#1f2937" stroke-width="2.5"/>
+      <text x="34" y="57" font-size="26" font-weight="700">Browser UI</text>
+      <text x="34" y="96" font-size="18">HTML + CSS + JavaScript</text>
+      <text x="34" y="132" font-size="18">- Chat bubbles</text>
+      <text x="34" y="164" font-size="18">- Input box</text>
+      <text x="34" y="196" font-size="18">- fetch('/api/chat')</text>
+      <text x="34" y="238" font-size="16" fill="#475569">templates/index.html</text>
+    </g>
+
+    <g transform="translate(474 185)">
+      <path d="M7 8 C89 0, 246 -1, 327 7 C343 8, 351 22, 352 38 C356 118, 355 196, 348 270 C347 286, 334 297, 318 298 C234 303, 88 302, 20 295 C7 294, 0 280, 2 263 C-3 187, -2 86, 7 8Z" fill="#dcfce7" stroke="#1f2937" stroke-width="2.5"/>
+      <text x="34" y="57" font-size="26" font-weight="700">Flask Backend</text>
+      <text x="34" y="96" font-size="18">Python app service</text>
+      <text x="34" y="132" font-size="18">- GET /</text>
+      <text x="34" y="164" font-size="18">- POST /api/chat</text>
+      <text x="34" y="196" font-size="18">- Read API key</text>
+      <text x="34" y="238" font-size="16" fill="#475569">app.py</text>
+    </g>
+
+    <g transform="translate(876 185)">
+      <path d="M5 8 C101 0, 235 -1, 318 8 C333 10, 345 21, 347 36 C353 112, 351 199, 344 267 C342 284, 331 296, 314 298 C229 304, 89 301, 20 294 C8 293, 0 280, 2 264 C-2 184, -2 85, 5 8Z" fill="#fef3c7" stroke="#1f2937" stroke-width="2.5"/>
+      <text x="34" y="57" font-size="26" font-weight="700">OpenAI API</text>
+      <text x="34" y="96" font-size="18">Chat completion model</text>
+      <text x="34" y="132" font-size="18">- Receives prompt</text>
+      <text x="34" y="164" font-size="18">- Generates reply</text>
+      <text x="34" y="196" font-size="18">- Returns content</text>
+      <text x="34" y="238" font-size="16" fill="#475569">gpt-4o-mini by default</text>
+    </g>
+
+    <path d="M424 318 C441 314, 451 314, 467 318" fill="none" stroke="#1f2937" stroke-width="2.5" marker-end="url(#arrow)"/>
+    <text x="415" y="290" font-size="17">JSON message</text>
+    <path d="M826 318 C844 314, 854 314, 870 318" fill="none" stroke="#1f2937" stroke-width="2.5" marker-end="url(#arrow)"/>
+    <text x="815" y="290" font-size="17">model call</text>
+
+    <path d="M872 392 C843 426, 800 449, 755 460" fill="none" stroke="#1f2937" stroke-width="2.5" marker-end="url(#arrow)"/>
+    <text x="775" y="442" font-size="17">reply</text>
+    <path d="M476 392 C440 427, 392 450, 348 459" fill="none" stroke="#1f2937" stroke-width="2.5" marker-end="url(#arrow)"/>
+    <text x="366" y="443" font-size="17">JSON response</text>
+
+    <g transform="translate(446 548)">
+      <path d="M4 7 C74 -1, 252 1, 323 8 C337 10, 348 22, 349 36 C352 72, 351 103, 345 134 C342 149, 331 158, 316 159 C236 163, 91 162, 22 157 C8 156, 0 144, 1 128 C-2 93, -1 45, 4 7Z" fill="#fee2e2" stroke="#1f2937" stroke-width="2.5"/>
+      <text x="28" y="48" font-size="22" font-weight="700">Local Fallback</text>
+      <text x="28" y="82" font-size="17">Used when no API key is found.</text>
+      <text x="28" y="113" font-size="17">Lets the UI flow still run.</text>
+    </g>
+    <path d="M635 484 C633 507, 631 523, 627 544" fill="none" stroke="#1f2937" stroke-width="2.5" marker-end="url(#arrow)"/>
+    <text x="650" y="524" font-size="17">no key</text>
+  </g>
+</svg>

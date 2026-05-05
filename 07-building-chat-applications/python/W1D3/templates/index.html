@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>W1D3 Chat Demo</title>
+    <style>
+      :root {
+        --bg-a: #f7f7f3;
+        --bg-b: #ecf6f2;
+        --card: #fffdfa;
+        --text: #1f2937;
+        --muted: #64748b;
+        --line: #dde5e0;
+        --user: #d8f6e8;
+        --bot: #ecf2ff;
+        --brand: #0f766e;
+        --brand-hover: #0d645e;
+        --warn: #b45309;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: "Segoe UI", "PingFang SC", "Noto Sans SC", sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at 10% 10%, #dff8ee 0%, transparent 28%),
+          radial-gradient(circle at 95% 5%, #f8efe2 0%, transparent 34%),
+          linear-gradient(140deg, var(--bg-a), var(--bg-b));
+      }
+      .shell {
+        max-width: 980px;
+        margin: 18px auto;
+        padding: 0 14px;
+      }
+      .panel {
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        background: var(--card);
+        box-shadow: 0 14px 35px rgba(20, 40, 30, 0.08);
+        overflow: hidden;
+      }
+      .head {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 14px 16px;
+        border-bottom: 1px solid var(--line);
+        background: #f9fffc;
+      }
+      .title {
+        font-size: 20px;
+        margin: 0;
+      }
+      .subtitle {
+        margin: 4px 0 0;
+        color: var(--muted);
+        font-size: 13px;
+      }
+      .badges {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .badge {
+        font-size: 12px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 6px 10px;
+        background: #fff;
+      }
+      .warn {
+        color: var(--warn);
+      }
+      .body {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+      .tools {
+        padding: 10px 16px;
+        border-bottom: 1px solid var(--line);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .chip {
+        border: 1px solid var(--line);
+        background: #fff;
+        border-radius: 999px;
+        padding: 6px 10px;
+        font-size: 12px;
+        cursor: pointer;
+      }
+      .chip:hover {
+        border-color: #c8d5cd;
+      }
+      .endpoint {
+        display: grid;
+        grid-template-columns: 160px 1fr;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 16px;
+        border-bottom: 1px solid var(--line);
+      }
+      .endpoint label {
+        color: var(--muted);
+        font-size: 13px;
+      }
+      .endpoint input {
+        border: 1px solid #cfd9d4;
+        border-radius: 9px;
+        padding: 8px 10px;
+        font-size: 13px;
+        width: 100%;
+      }
+      .chat {
+        min-height: 420px;
+        max-height: 560px;
+        overflow-y: auto;
+        padding: 14px;
+        background:
+          linear-gradient(#fdfdfd, #f9fcfb),
+          repeating-linear-gradient(
+            to bottom,
+            transparent 0,
+            transparent 31px,
+            rgba(148, 163, 184, 0.045) 32px
+          );
+      }
+      .row {
+        display: flex;
+        margin: 10px 0;
+      }
+      .row.user {
+        justify-content: flex-end;
+      }
+      .bubble {
+        max-width: min(86%, 700px);
+        border-radius: 13px;
+        padding: 10px 12px;
+        white-space: pre-wrap;
+        line-height: 1.45;
+        font-size: 14px;
+      }
+      .row.user .bubble {
+        background: var(--user);
+        border-bottom-right-radius: 4px;
+      }
+      .row.assistant .bubble {
+        background: var(--bot);
+        border-bottom-left-radius: 4px;
+      }
+      .meta {
+        margin-top: 4px;
+        color: var(--muted);
+        font-size: 11px;
+      }
+      .typing {
+        color: var(--muted);
+        font-size: 13px;
+        padding: 4px 0 0 2px;
+      }
+      .composer {
+        border-top: 1px solid var(--line);
+        padding: 10px 12px;
+        display: grid;
+        grid-template-columns: 1fr auto auto;
+        gap: 8px;
+        background: #fbfefc;
+      }
+      .composer textarea {
+        resize: none;
+        min-height: 42px;
+        max-height: 120px;
+        border: 1px solid #cfd9d4;
+        border-radius: 10px;
+        padding: 10px 12px;
+        font-size: 14px;
+        font-family: inherit;
+      }
+      .btn {
+        border: none;
+        border-radius: 10px;
+        padding: 10px 14px;
+        font-size: 14px;
+        cursor: pointer;
+      }
+      .btn.send {
+        color: white;
+        background: var(--brand);
+      }
+      .btn.send:hover {
+        background: var(--brand-hover);
+      }
+      .btn.ghost {
+        color: #334155;
+        background: #eef3f0;
+      }
+      @media (max-width: 700px) {
+        .head {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .endpoint {
+          grid-template-columns: 1fr;
+        }
+        .composer {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="shell">
+      <div class="panel">
+        <div class="head">
+          <div>
+            <h1 class="title">W1D3 最小 Chat Demo</h1>
+            <p class="subtitle">目标：从“可调用 API”到“可用聊天体验”</p>
+          </div>
+          <div class="badges">
+            <span class="badge">模式：{% if use_model %}OpenAI API{% else %}本地回退{% endif %}</span>
+            <span class="badge">模型：{{ model_name }}</span>
+          </div>
+        </div>
+
+        <div class="body">
+          <div class="endpoint">
+            <label for="endpointInput">Chat API 地址（可改）</label>
+            <input id="endpointInput" value="/api/chat" />
+          </div>
+
+          <div class="tools">
+            <button class="chip" data-q="请用通俗语言解释什么是 Prompt Engineering。">解释 Prompt Engineering</button>
+            <button class="chip" data-q="给我 3 条练习高级提示词的建议。">给我学习建议</button>
+            <button class="chip" data-q="请把 few-shot、chain-of-thought、self-refine 的区别做成表格。">比较三种技巧</button>
+            <span id="runtimeHint" class="badge warn"></span>
+          </div>
+
+          <div id="chat" class="chat"></div>
+          <div id="typing" class="typing" style="display: none;">AI 正在思考...</div>
+
+          <div class="composer">
+            <textarea id="prompt" placeholder="输入你的问题。Enter 发送，Shift+Enter 换行。"></textarea>
+            <button id="send" class="btn send">发送</button>
+            <button id="clear" class="btn ghost">清空</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const chatEl = document.getElementById("chat");
+      const promptEl = document.getElementById("prompt");
+      const sendEl = document.getElementById("send");
+      const clearEl = document.getElementById("clear");
+      const typingEl = document.getElementById("typing");
+      const endpointInput = document.getElementById("endpointInput");
+      const runtimeHint = document.getElementById("runtimeHint");
+      const chips = Array.from(document.querySelectorAll(".chip"));
+      const STORE_KEY = "w1d3_chat_history_v1";
+
+      function nowTime() {
+        const d = new Date();
+        return d.toLocaleTimeString("zh-CN", { hour12: false });
+      }
+
+      function appendMessage(role, text, stamp = nowTime()) {
+        const row = document.createElement("div");
+        row.className = `row ${role}`;
+
+        const wrap = document.createElement("div");
+        const bubble = document.createElement("div");
+        bubble.className = "bubble";
+        bubble.textContent = text;
+        const meta = document.createElement("div");
+        meta.className = "meta";
+        meta.textContent = `${role === "user" ? "你" : "AI"} · ${stamp}`;
+
+        wrap.appendChild(bubble);
+        wrap.appendChild(meta);
+        row.appendChild(wrap);
+        chatEl.appendChild(row);
+        chatEl.scrollTop = chatEl.scrollHeight;
+      }
+
+      function persistHistory() {
+        const data = [];
+        chatEl.querySelectorAll(".row").forEach((row) => {
+          const role = row.classList.contains("user") ? "user" : "assistant";
+          const bubble = row.querySelector(".bubble");
+          const meta = row.querySelector(".meta");
+          const stamp = (meta?.textContent || "").split("·")[1]?.trim() || nowTime();
+          data.push({ role, text: bubble?.textContent || "", stamp });
+        });
+        sessionStorage.setItem(STORE_KEY, JSON.stringify(data));
+      }
+
+      function loadHistory() {
+        try {
+          const raw = sessionStorage.getItem(STORE_KEY);
+          if (!raw) return;
+          const list = JSON.parse(raw);
+          if (!Array.isArray(list)) return;
+          list.forEach((m) => appendMessage(m.role, m.text, m.stamp || nowTime()));
+        } catch (_) {}
+      }
+
+      function resolveEndpoint() {
+        let ep = endpointInput.value.trim() || "/api/chat";
+        if (ep.endsWith("/")) ep = ep.slice(0, -1);
+        return ep;
+      }
+
+      async function sendMessage() {
+        const text = promptEl.value.trim();
+        if (!text) return;
+        appendMessage("user", text);
+        persistHistory();
+
+        promptEl.value = "";
+        sendEl.disabled = true;
+        typingEl.style.display = "block";
+
+        try {
+          const resp = await fetch(resolveEndpoint(), {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ message: text }),
+          });
+          const data = await resp.json();
+          if (!resp.ok) throw new Error(data.error || "请求失败");
+          appendMessage("assistant", data.reply || "");
+        } catch (err) {
+          appendMessage("assistant", `请求失败：${err.message}`);
+        } finally {
+          typingEl.style.display = "none";
+          sendEl.disabled = false;
+          promptEl.focus();
+          persistHistory();
+        }
+      }
+
+      sendEl.addEventListener("click", sendMessage);
+      clearEl.addEventListener("click", () => {
+        chatEl.innerHTML = "";
+        sessionStorage.removeItem(STORE_KEY);
+        promptEl.focus();
+      });
+      promptEl.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" && !e.shiftKey) {
+          e.preventDefault();
+          sendMessage();
+        }
+      });
+
+      chips.forEach((chip) => {
+        chip.addEventListener("click", () => {
+          promptEl.value = chip.dataset.q || "";
+          promptEl.focus();
+        });
+      });
+
+      if (location.protocol === "file:") {
+        endpointInput.value = "http://127.0.0.1:5055/api/chat";
+        runtimeHint.textContent = "你当前是 file:// 打开，已自动切换完整 API 地址";
+      } else {
+        runtimeHint.textContent = "建议通过 Flask 页面访问，避免跨域/路径问题";
+      }
+
+      loadHistory();
+      if (!chatEl.children.length) {
+        appendMessage("assistant", "你好，我是你的 W1D3 学习助手。你可以先点击上方快捷问题。");
+      }
+      promptEl.focus();
+    </script>
+  </body>
+</html>

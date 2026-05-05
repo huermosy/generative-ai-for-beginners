@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-label="OpenAI key loading flow">
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10" fill="none" stroke="#111827" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="720" fill="#fffdf7"/>
+  <g font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" fill="#1f2937">
+    <text x="70" y="72" font-size="34" font-weight="700">OpenAI Key Loading Flow</text>
+    <text x="72" y="106" font-size="18" fill="#64748b">The app tries multiple locations, then chooses real API mode or fallback mode.</text>
+
+    <g transform="translate(95 172)">
+      <path d="M6 8 C76 0, 236 0, 309 8 C324 10, 334 21, 336 35 C340 75, 339 116, 331 151 C328 166, 316 176, 301 177 C225 182, 88 180, 20 174 C7 173, 0 160, 2 144 C-2 104, -1 43, 6 8Z" fill="#dbeafe" stroke="#111827" stroke-width="2.4"/>
+      <text x="28" y="56" font-size="23" font-weight="700">1. Environment</text>
+      <text x="28" y="96" font-size="17">OPENAI_API_KEY</text>
+      <text x="28" y="130" font-size="16" fill="#475569">Best for normal dev setup</text>
+    </g>
+    <g transform="translate(444 172)">
+      <path d="M6 8 C76 0, 236 0, 309 8 C324 10, 334 21, 336 35 C340 75, 339 116, 331 151 C328 166, 316 176, 301 177 C225 182, 88 180, 20 174 C7 173, 0 160, 2 144 C-2 104, -1 43, 6 8Z" fill="#ecfccb" stroke="#111827" stroke-width="2.4"/>
+      <text x="28" y="56" font-size="23" font-weight="700">2. Local file</text>
+      <text x="28" y="96" font-size="17">C:\Openaikey</text>
+      <text x="28" y="130" font-size="16" fill="#475569">No extension version</text>
+    </g>
+    <g transform="translate(793 172)">
+      <path d="M6 8 C76 0, 236 0, 309 8 C324 10, 334 21, 336 35 C340 75, 339 116, 331 151 C328 166, 316 176, 301 177 C225 182, 88 180, 20 174 C7 173, 0 160, 2 144 C-2 104, -1 43, 6 8Z" fill="#fef3c7" stroke="#111827" stroke-width="2.4"/>
+      <text x="28" y="56" font-size="23" font-weight="700">3. Text file</text>
+      <text x="28" y="96" font-size="17">C:\Openaikey.txt</text>
+      <text x="28" y="130" font-size="16" fill="#475569">Your current setup</text>
+    </g>
+
+    <path d="M430 260 C434 257, 438 257, 443 260" fill="none" stroke="#111827" stroke-width="2.4" marker-end="url(#arrow)"/>
+    <path d="M779 260 C783 257, 787 257, 792 260" fill="none" stroke="#111827" stroke-width="2.4" marker-end="url(#arrow)"/>
+
+    <g transform="translate(265 430)">
+      <path d="M5 8 C87 0, 274 0, 354 8 C371 10, 383 22, 385 38 C391 87, 389 127, 381 169 C378 186, 364 197, 347 198 C257 203, 98 202, 23 195 C9 194, 0 181, 2 164 C-3 116, -1 49, 5 8Z" fill="#ccfbf1" stroke="#111827" stroke-width="2.4"/>
+      <text x="32" y="58" font-size="24" font-weight="700">Key found</text>
+      <text x="32" y="98" font-size="17">Create OpenAI client.</text>
+      <text x="32" y="132" font-size="17">UI shows OpenAI API mode.</text>
+      <text x="32" y="162" font-size="16" fill="#475569">Real model answers are enabled.</text>
+    </g>
+
+    <g transform="translate(710 430)">
+      <path d="M6 8 C86 0, 273 0, 354 8 C370 10, 382 22, 384 38 C390 87, 388 127, 380 169 C377 186, 363 197, 346 198 C256 203, 98 202, 23 195 C9 194, 0 181, 2 164 C-3 116, -1 49, 6 8Z" fill="#fee2e2" stroke="#111827" stroke-width="2.4"/>
+      <text x="32" y="58" font-size="24" font-weight="700">No key found</text>
+      <text x="32" y="98" font-size="17">Use local fallback reply.</text>
+      <text x="32" y="132" font-size="17">UI still works end to end.</text>
+      <text x="32" y="162" font-size="16" fill="#475569">Good for learning the flow first.</text>
+    </g>
+
+    <path d="M950 350 C851 398, 721 414, 620 490" fill="none" stroke="#111827" stroke-width="2.4" marker-end="url(#arrow)"/>
+    <text x="666" y="398" font-size="17">success</text>
+    <path d="M950 350 C967 381, 972 405, 938 430" fill="none" stroke="#111827" stroke-width="2.4" marker-end="url(#arrow)"/>
+    <text x="978" y="398" font-size="17">miss</text>
+  </g>
+</svg>

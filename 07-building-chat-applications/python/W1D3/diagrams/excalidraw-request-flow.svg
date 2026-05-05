@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-label="W1D3 request flow">
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10" fill="none" stroke="#111827" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="720" fill="#fffdf7"/>
+  <g font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" fill="#1f2937">
+    <text x="70" y="70" font-size="34" font-weight="700">Request Lifecycle</text>
+    <text x="72" y="104" font-size="18" fill="#64748b">The exact path from typing a message to seeing the answer.</text>
+
+    <g transform="translate(86 172)">
+      <path d="M7 8 C85 0, 236 0, 306 8 C321 10, 330 20, 332 35 C337 71, 336 113, 329 145 C326 159, 314 168, 299 169 C226 174, 86 172, 21 166 C8 165, 0 153, 2 137 C-2 99, -1 43, 7 8Z" fill="#dbeafe" stroke="#111827" stroke-width="2.4"/>
+      <text x="28" y="52" font-size="23" font-weight="700">1. Type message</text>
+      <text x="28" y="90" font-size="17">User writes text in the UI.</text>
+    </g>
+    <g transform="translate(438 172)">
+      <path d="M6 8 C92 0, 237 0, 309 8 C323 9, 332 20, 334 35 C338 75, 336 112, 329 145 C326 160, 314 169, 299 170 C226 174, 87 173, 20 166 C7 165, 0 153, 2 137 C-2 98, -1 44, 6 8Z" fill="#ccfbf1" stroke="#111827" stroke-width="2.4"/>
+      <text x="28" y="52" font-size="23" font-weight="700">2. fetch()</text>
+      <text x="28" y="90" font-size="17">Browser sends JSON.</text>
+      <text x="28" y="120" font-size="16" fill="#475569">POST /api/chat</text>
+    </g>
+    <g transform="translate(790 172)">
+      <path d="M6 8 C83 0, 239 0, 309 8 C324 10, 333 20, 335 35 C339 74, 338 112, 331 145 C328 159, 316 169, 301 170 C226 174, 86 173, 20 166 C7 165, 0 153, 2 137 C-2 99, -1 43, 6 8Z" fill="#dcfce7" stroke="#111827" stroke-width="2.4"/>
+      <text x="28" y="52" font-size="23" font-weight="700">3. Flask route</text>
+      <text x="28" y="90" font-size="17">Parse request body.</text>
+      <text x="28" y="120" font-size="16" fill="#475569">message field</text>
+    </g>
+
+    <path d="M421 257 C428 253, 431 253, 437 257" fill="none" stroke="#111827" stroke-width="2.4" marker-end="url(#arrow)"/>
+    <path d="M773 257 C780 253, 783 253, 789 257" fill="none" stroke="#111827" stroke-width="2.4" marker-end="url(#arrow)"/>
+
+    <g transform="translate(790 417)">
+      <path d="M6 8 C86 0, 238 0, 309 8 C324 10, 333 20, 335 35 C340 76, 338 112, 331 145 C328 159, 316 168, 301 170 C226 174, 86 173, 20 166 C7 165, 0 153, 2 137 C-2 99, -1 43, 6 8Z" fill="#fef3c7" stroke="#111827" stroke-width="2.4"/>
+      <text x="28" y="52" font-size="23" font-weight="700">4. Model call</text>
+      <text x="28" y="90" font-size="17">OpenAI creates reply.</text>
+      <text x="28" y="120" font-size="16" fill="#475569">temperature = 0.3</text>
+    </g>
+    <g transform="translate(438 417)">
+      <path d="M6 8 C86 0, 238 0, 309 8 C324 10, 333 20, 335 35 C340 76, 338 112, 331 145 C328 159, 316 168, 301 170 C226 174, 86 173, 20 166 C7 165, 0 153, 2 137 C-2 99, -1 43, 6 8Z" fill="#fae8ff" stroke="#111827" stroke-width="2.4"/>
+      <text x="28" y="52" font-size="23" font-weight="700">5. JSON reply</text>
+      <text x="28" y="90" font-size="17">Backend returns data.</text>
+      <text x="28" y="120" font-size="16" fill="#475569">{ reply: "..." }</text>
+    </g>
+    <g transform="translate(86 417)">
+      <path d="M7 8 C86 0, 238 0, 308 8 C323 10, 332 20, 334 35 C339 76, 337 112, 330 145 C327 159, 315 168, 300 170 C226 174, 86 173, 20 166 C7 165, 0 153, 2 137 C-2 99, -1 43, 7 8Z" fill="#e0f2fe" stroke="#111827" stroke-width="2.4"/>
+      <text x="28" y="52" font-size="23" font-weight="700">6. Render bubble</text>
+      <text x="28" y="90" font-size="17">UI appends answer.</text>
+      <text x="28" y="120" font-size="16" fill="#475569">chat history updates</text>
+    </g>
+
+    <path d="M958 346 C957 374, 957 389, 957 413" fill="none" stroke="#111827" stroke-width="2.4" marker-end="url(#arrow)"/>
+    <path d="M789 502 C781 498, 776 498, 768 502" fill="none" stroke="#111827" stroke-width="2.4" marker-end="url(#arrow)"/>
+    <path d="M437 502 C429 498, 424 498, 416 502" fill="none" stroke="#111827" stroke-width="2.4" marker-end="url(#arrow)"/>
+  </g>
+</svg>
