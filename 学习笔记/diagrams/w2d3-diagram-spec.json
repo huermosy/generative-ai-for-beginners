@@ -1,0 +1,94 @@
+{
+  "diagrams": [
+    {
+      "file": "w2d3-tool-calling-mental-model.excalidraw",
+      "title": "W2D3：函数调用心智模型",
+      "nodes": [
+        {"id": "user", "type": "rect", "x": 80, "y": 150, "w": 220, "h": 90, "text": "用户\n自然语言目标", "fill": "#e7f5ff"},
+        {"id": "model", "type": "rect", "x": 390, "y": 150, "w": 240, "h": 90, "text": "模型\n理解意图", "fill": "#fff9db"},
+        {"id": "schema", "type": "rect", "x": 390, "y": 310, "w": 240, "h": 100, "text": "工具说明\nname + description\nparameters", "fill": "#f3f0ff"},
+        {"id": "choice", "type": "diamond", "x": 730, "y": 130, "w": 240, "h": 130, "text": "需要工具吗？", "fill": "#fff0f6"},
+        {"id": "args", "type": "rect", "x": 1070, "y": 150, "w": 250, "h": 90, "text": "模型输出\n工具名 + 参数JSON", "fill": "#e6fcf5"},
+        {"id": "app", "type": "rect", "x": 1070, "y": 320, "w": 250, "h": 90, "text": "应用代码\n真正执行函数", "fill": "#ffe8cc"},
+        {"id": "answer", "type": "rect", "x": 1410, "y": 150, "w": 250, "h": 90, "text": "模型整合结果\n回答用户", "fill": "#d3f9d8"}
+      ],
+      "edges": [
+        {"from": "user", "to": "model", "label": "提出需求"},
+        {"from": "schema", "to": "model", "label": "给模型可用工具"},
+        {"from": "model", "to": "choice", "label": "判断"},
+        {"from": "choice", "to": "args", "label": "是：生成调用参数"},
+        {"from": "args", "to": "app", "label": "开发者解析"},
+        {"from": "app", "to": "answer", "label": "工具结果回填"}
+      ],
+      "notes": ["关键记忆：模型不直接执行函数；模型负责选择工具并生成参数，应用负责执行。"]
+    },
+    {
+      "file": "w2d3-input-output-contract.excalidraw",
+      "title": "W2D3：输入输出契约",
+      "nodes": [
+        {"id": "input", "type": "rect", "x": 90, "y": 150, "w": 260, "h": 100, "text": "用户输入\n“帮我找适合初学者的 Azure 课程”", "fill": "#e7f5ff"},
+        {"id": "tool", "type": "rect", "x": 450, "y": 120, "w": 300, "h": 160, "text": "工具 Schema\nrole: string\nproduct: string\nlevel: string", "fill": "#f3f0ff"},
+        {"id": "arguments", "type": "rect", "x": 850, "y": 150, "w": 280, "h": 110, "text": "模型生成参数\n{ role, product, level }", "fill": "#e6fcf5"},
+        {"id": "function", "type": "rect", "x": 1230, "y": 150, "w": 260, "h": 110, "text": "search_courses()\n查询课程数据", "fill": "#ffe8cc"},
+        {"id": "result", "type": "rect", "x": 1590, "y": 150, "w": 270, "h": 110, "text": "工具结果\n课程列表 JSON", "fill": "#d3f9d8"},
+        {"id": "final", "type": "rect", "x": 1590, "y": 340, "w": 270, "h": 100, "text": "最终回答\n人类可读推荐", "fill": "#fff9db"}
+      ],
+      "edges": [
+        {"from": "input", "to": "tool", "label": "对齐字段"},
+        {"from": "tool", "to": "arguments", "label": "约束输出"},
+        {"from": "arguments", "to": "function", "label": "传参"},
+        {"from": "function", "to": "result", "label": "返回数据"},
+        {"from": "result", "to": "final", "label": "再交给模型组织语言"}
+      ],
+      "notes": ["函数调用的价值不是“更聪明”，而是把自然语言转成应用能处理的结构化契约。"]
+    },
+    {
+      "file": "w2d3-app-flow-v1.excalidraw",
+      "title": "W2D3：应用流程图 v1",
+      "nodes": [
+        {"id": "start", "type": "rect", "x": 80, "y": 150, "w": 230, "h": 90, "text": "1. 收集用户问题", "fill": "#e7f5ff"},
+        {"id": "send", "type": "rect", "x": 390, "y": 150, "w": 250, "h": 90, "text": "2. 发送 messages + tools", "fill": "#fff9db"},
+        {"id": "hasTool", "type": "diamond", "x": 730, "y": 125, "w": 250, "h": 140, "text": "3. 返回 tool_calls？", "fill": "#fff0f6"},
+        {"id": "parse", "type": "rect", "x": 1080, "y": 150, "w": 260, "h": 90, "text": "4. 解析 arguments", "fill": "#f3f0ff"},
+        {"id": "execute", "type": "rect", "x": 1430, "y": 150, "w": 260, "h": 90, "text": "5. 执行业务函数/API", "fill": "#ffe8cc"},
+        {"id": "append", "type": "rect", "x": 1080, "y": 350, "w": 260, "h": 90, "text": "6. 追加 role=tool 结果", "fill": "#e6fcf5"},
+        {"id": "second", "type": "rect", "x": 1430, "y": 350, "w": 260, "h": 90, "text": "7. 第二次调用模型", "fill": "#fff9db"},
+        {"id": "answer", "type": "rect", "x": 1770, "y": 350, "w": 250, "h": 90, "text": "8. 返回最终答案", "fill": "#d3f9d8"},
+        {"id": "direct", "type": "rect", "x": 730, "y": 350, "w": 250, "h": 90, "text": "无工具：直接回答", "fill": "#dee2e6"}
+      ],
+      "edges": [
+        {"from": "start", "to": "send"},
+        {"from": "send", "to": "hasTool"},
+        {"from": "hasTool", "to": "parse", "label": "是"},
+        {"from": "parse", "to": "execute"},
+        {"from": "execute", "to": "append"},
+        {"from": "append", "to": "second"},
+        {"from": "second", "to": "answer"},
+        {"from": "hasTool", "to": "direct", "label": "否"}
+      ],
+      "notes": ["这张图就是今天的交付物：应用流程图 v1。先把闭环画清楚，再写代码。"]
+    },
+    {
+      "file": "w2d3-tool-design-checklist.excalidraw",
+      "title": "W2D3：工具设计检查清单",
+      "nodes": [
+        {"id": "goal", "type": "rect", "x": 90, "y": 150, "w": 270, "h": 100, "text": "业务目标\n用户到底要完成什么？", "fill": "#e7f5ff"},
+        {"id": "toolname", "type": "rect", "x": 460, "y": 150, "w": 270, "h": 100, "text": "工具命名\n动词 + 业务对象", "fill": "#fff9db"},
+        {"id": "params", "type": "rect", "x": 830, "y": 150, "w": 270, "h": 100, "text": "参数设计\n少而明确，可校验", "fill": "#f3f0ff"},
+        {"id": "ambiguous", "type": "diamond", "x": 1200, "y": 130, "w": 250, "h": 140, "text": "信息不足？", "fill": "#fff0f6"},
+        {"id": "clarify", "type": "rect", "x": 1540, "y": 120, "w": 270, "h": 100, "text": "先追问\n不要瞎填参数", "fill": "#ffe8cc"},
+        {"id": "execute", "type": "rect", "x": 1540, "y": 300, "w": 270, "h": 100, "text": "执行工具\n处理错误和空结果", "fill": "#e6fcf5"},
+        {"id": "final", "type": "rect", "x": 1190, "y": 330, "w": 270, "h": 100, "text": "最终答复\n解释依据和下一步", "fill": "#d3f9d8"}
+      ],
+      "edges": [
+        {"from": "goal", "to": "toolname"},
+        {"from": "toolname", "to": "params"},
+        {"from": "params", "to": "ambiguous"},
+        {"from": "ambiguous", "to": "clarify", "label": "是"},
+        {"from": "ambiguous", "to": "execute", "label": "否"},
+        {"from": "execute", "to": "final"}
+      ],
+      "notes": ["好工具不是参数越多越强，而是边界清楚、输入可验证、失败可解释。"]
+    }
+  ]
+}

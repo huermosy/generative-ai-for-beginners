@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1876" height="744" viewBox="0 0 1876 744">
+  <defs><marker id="arrowhead" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M 0 0 L 10 4 L 0 8 z" fill="#1e1e1e"/></marker></defs>
+  <rect width="100%" height="100%" fill="#fffdf8"/>
+  <text x="48" y="48" text-anchor="start" dominant-baseline="hanging" font-family="Segoe Print, Comic Sans MS, cursive" font-size="36" fill="#1e1e1e"><tspan x="48" dy="0">W2D3：输入输出契约</tspan></text>
+  <rect x="58" y="166" width="260" height="100" rx="12" ry="12" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+  <text x="188" y="216" text-anchor="middle" dominant-baseline="middle" font-family="Segoe Print, Comic Sans MS, cursive" font-size="24" fill="#1e1e1e"><tspan x="188" dy="0">用户输入</tspan><tspan x="188" dy="30">“帮我找适合初学者的 Azure 课程”</tspan></text>
+  <rect x="418" y="136" width="300" height="160" rx="12" ry="12" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/>
+  <text x="568" y="216" text-anchor="middle" dominant-baseline="middle" font-family="Segoe Print, Comic Sans MS, cursive" font-size="24" fill="#1e1e1e"><tspan x="568" dy="0">工具 Schema</tspan><tspan x="568" dy="30">role: string</tspan><tspan x="568" dy="30">product: string</tspan><tspan x="568" dy="30">level: string</tspan></text>
+  <rect x="818" y="166" width="280" height="110" rx="12" ry="12" fill="#e6fcf5" stroke="#1e1e1e" stroke-width="2"/>
+  <text x="958" y="221" text-anchor="middle" dominant-baseline="middle" font-family="Segoe Print, Comic Sans MS, cursive" font-size="24" fill="#1e1e1e"><tspan x="958" dy="0">模型生成参数</tspan><tspan x="958" dy="30">{ role, product, level }</tspan></text>
+  <rect x="1198" y="166" width="260" height="110" rx="12" ry="12" fill="#ffe8cc" stroke="#1e1e1e" stroke-width="2"/>
+  <text x="1328" y="221" text-anchor="middle" dominant-baseline="middle" font-family="Segoe Print, Comic Sans MS, cursive" font-size="24" fill="#1e1e1e"><tspan x="1328" dy="0">search_courses()</tspan><tspan x="1328" dy="30">查询课程数据</tspan></text>
+  <rect x="1558" y="166" width="270" height="110" rx="12" ry="12" fill="#d3f9d8" stroke="#1e1e1e" stroke-width="2"/>
+  <text x="1693" y="221" text-anchor="middle" dominant-baseline="middle" font-family="Segoe Print, Comic Sans MS, cursive" font-size="24" fill="#1e1e1e"><tspan x="1693" dy="0">工具结果</tspan><tspan x="1693" dy="30">课程列表 JSON</tspan></text>
+  <rect x="1558" y="356" width="270" height="100" rx="12" ry="12" fill="#fff9db" stroke="#1e1e1e" stroke-width="2"/>
+  <text x="1693" y="406" text-anchor="middle" dominant-baseline="middle" font-family="Segoe Print, Comic Sans MS, cursive" font-size="24" fill="#1e1e1e"><tspan x="1693" dy="0">最终回答</tspan><tspan x="1693" dy="30">人类可读推荐</tspan></text>
+  <path d="M 188 216 L 568 216" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrowhead)"/>
+  <text x="378" y="192" text-anchor="middle" dominant-baseline="middle" font-family="Segoe Print, Comic Sans MS, cursive" font-size="18" fill="#1e1e1e"><tspan x="378" dy="0">对齐字段</tspan></text>
+  <path d="M 568 216 L 958 221" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrowhead)"/>
+  <text x="763" y="194.5" text-anchor="middle" dominant-baseline="middle" font-family="Segoe Print, Comic Sans MS, cursive" font-size="18" fill="#1e1e1e"><tspan x="763" dy="0">约束输出</tspan></text>
+  <path d="M 958 221 L 1328 221" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrowhead)"/>
+  <text x="1143" y="197" text-anchor="middle" dominant-baseline="middle" font-family="Segoe Print, Comic Sans MS, cursive" font-size="18" fill="#1e1e1e"><tspan x="1143" dy="0">传参</tspan></text>
+  <path d="M 1328 221 L 1693 221" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrowhead)"/>
+  <text x="1510.5" y="197" text-anchor="middle" dominant-baseline="middle" font-family="Segoe Print, Comic Sans MS, cursive" font-size="18" fill="#1e1e1e"><tspan x="1510.5" dy="0">返回数据</tspan></text>
+  <path d="M 1693 221 L 1693 406" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrowhead)"/>
+  <text x="1693" y="289.5" text-anchor="middle" dominant-baseline="middle" font-family="Segoe Print, Comic Sans MS, cursive" font-size="18" fill="#1e1e1e"><tspan x="1693" dy="0">再交给模型组织语言</tspan></text>
+  <text x="58" y="696" text-anchor="start" dominant-baseline="hanging" font-family="Segoe Print, Comic Sans MS, cursive" font-size="24" fill="#1e1e1e"><tspan x="58" dy="0">函数调用的价值不是“更聪明”，而是把自然语言转成应用能处理的结构化契约。</tspan></text>
+</svg>

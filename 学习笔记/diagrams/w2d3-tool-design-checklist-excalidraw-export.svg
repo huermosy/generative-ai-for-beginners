@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1826" height="744" viewBox="0 0 1826 744">
+  <defs><marker id="arrowhead" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M 0 0 L 10 4 L 0 8 z" fill="#1e1e1e"/></marker></defs>
+  <rect width="100%" height="100%" fill="#fffdf8"/>
+  <text x="48" y="48" text-anchor="start" dominant-baseline="hanging" font-family="Segoe Print, Comic Sans MS, cursive" font-size="36" fill="#1e1e1e"><tspan x="48" dy="0">W2D3：工具设计检查清单</tspan></text>
+  <rect x="58" y="166" width="270" height="100" rx="12" ry="12" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+  <text x="193" y="216" text-anchor="middle" dominant-baseline="middle" font-family="Segoe Print, Comic Sans MS, cursive" font-size="24" fill="#1e1e1e"><tspan x="193" dy="0">业务目标</tspan><tspan x="193" dy="30">用户到底要完成什么？</tspan></text>
+  <rect x="428" y="166" width="270" height="100" rx="12" ry="12" fill="#fff9db" stroke="#1e1e1e" stroke-width="2"/>
+  <text x="563" y="216" text-anchor="middle" dominant-baseline="middle" font-family="Segoe Print, Comic Sans MS, cursive" font-size="24" fill="#1e1e1e"><tspan x="563" dy="0">工具命名</tspan><tspan x="563" dy="30">动词 + 业务对象</tspan></text>
+  <rect x="798" y="166" width="270" height="100" rx="12" ry="12" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/>
+  <text x="933" y="216" text-anchor="middle" dominant-baseline="middle" font-family="Segoe Print, Comic Sans MS, cursive" font-size="24" fill="#1e1e1e"><tspan x="933" dy="0">参数设计</tspan><tspan x="933" dy="30">少而明确，可校验</tspan></text>
+  <polygon points="1293,146 1418,216 1293,286 1168,216" fill="#fff0f6" stroke="#1e1e1e" stroke-width="2"/>
+  <text x="1293" y="216" text-anchor="middle" dominant-baseline="middle" font-family="Segoe Print, Comic Sans MS, cursive" font-size="24" fill="#1e1e1e"><tspan x="1293" dy="0">信息不足？</tspan></text>
+  <rect x="1508" y="136" width="270" height="100" rx="12" ry="12" fill="#ffe8cc" stroke="#1e1e1e" stroke-width="2"/>
+  <text x="1643" y="186" text-anchor="middle" dominant-baseline="middle" font-family="Segoe Print, Comic Sans MS, cursive" font-size="24" fill="#1e1e1e"><tspan x="1643" dy="0">先追问</tspan><tspan x="1643" dy="30">不要瞎填参数</tspan></text>
+  <rect x="1508" y="316" width="270" height="100" rx="12" ry="12" fill="#e6fcf5" stroke="#1e1e1e" stroke-width="2"/>
+  <text x="1643" y="366" text-anchor="middle" dominant-baseline="middle" font-family="Segoe Print, Comic Sans MS, cursive" font-size="24" fill="#1e1e1e"><tspan x="1643" dy="0">执行工具</tspan><tspan x="1643" dy="30">处理错误和空结果</tspan></text>
+  <rect x="1158" y="346" width="270" height="100" rx="12" ry="12" fill="#d3f9d8" stroke="#1e1e1e" stroke-width="2"/>
+  <text x="1293" y="396" text-anchor="middle" dominant-baseline="middle" font-family="Segoe Print, Comic Sans MS, cursive" font-size="24" fill="#1e1e1e"><tspan x="1293" dy="0">最终答复</tspan><tspan x="1293" dy="30">解释依据和下一步</tspan></text>
+  <path d="M 193 216 L 563 216" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrowhead)"/>
+  <path d="M 563 216 L 933 216" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrowhead)"/>
+  <path d="M 933 216 L 1293 216" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrowhead)"/>
+  <path d="M 1293 216 L 1643 186" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrowhead)"/>
+  <text x="1468" y="177" text-anchor="middle" dominant-baseline="middle" font-family="Segoe Print, Comic Sans MS, cursive" font-size="18" fill="#1e1e1e"><tspan x="1468" dy="0">是</tspan></text>
+  <path d="M 1293 216 L 1643 366" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrowhead)"/>
+  <text x="1468" y="267" text-anchor="middle" dominant-baseline="middle" font-family="Segoe Print, Comic Sans MS, cursive" font-size="18" fill="#1e1e1e"><tspan x="1468" dy="0">否</tspan></text>
+  <path d="M 1643 366 L 1293 396" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrowhead)"/>
+  <text x="58" y="696" text-anchor="start" dominant-baseline="hanging" font-family="Segoe Print, Comic Sans MS, cursive" font-size="24" fill="#1e1e1e"><tspan x="58" dy="0">好工具不是参数越多越强，而是边界清楚、输入可验证、失败可解释。</tspan></text>
+</svg>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1676" height="744" viewBox="0 0 1676 744">
+  <defs><marker id="arrowhead" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M 0 0 L 10 4 L 0 8 z" fill="#1e1e1e"/></marker></defs>
+  <rect width="100%" height="100%" fill="#fffdf8"/>
+  <text x="48" y="48" text-anchor="start" dominant-baseline="hanging" font-family="Segoe Print, Comic Sans MS, cursive" font-size="36" fill="#1e1e1e"><tspan x="48" dy="0">W2D3：函数调用心智模型</tspan></text>
+  <rect x="48" y="166" width="220" height="90" rx="12" ry="12" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+  <text x="158" y="211" text-anchor="middle" dominant-baseline="middle" font-family="Segoe Print, Comic Sans MS, cursive" font-size="24" fill="#1e1e1e"><tspan x="158" dy="0">用户</tspan><tspan x="158" dy="30">自然语言目标</tspan></text>
+  <rect x="358" y="166" width="240" height="90" rx="12" ry="12" fill="#fff9db" stroke="#1e1e1e" stroke-width="2"/>
+  <text x="478" y="211" text-anchor="middle" dominant-baseline="middle" font-family="Segoe Print, Comic Sans MS, cursive" font-size="24" fill="#1e1e1e"><tspan x="478" dy="0">模型</tspan><tspan x="478" dy="30">理解意图</tspan></text>
+  <rect x="358" y="326" width="240" height="100" rx="12" ry="12" fill="#f3f0ff" stroke="#1e1e1e" stroke-width="2"/>
+  <text x="478" y="376" text-anchor="middle" dominant-baseline="middle" font-family="Segoe Print, Comic Sans MS, cursive" font-size="24" fill="#1e1e1e"><tspan x="478" dy="0">工具说明</tspan><tspan x="478" dy="30">name + description</tspan><tspan x="478" dy="30">parameters</tspan></text>
+  <polygon points="818,146 938,211 818,276 698,211" fill="#fff0f6" stroke="#1e1e1e" stroke-width="2"/>
+  <text x="818" y="211" text-anchor="middle" dominant-baseline="middle" font-family="Segoe Print, Comic Sans MS, cursive" font-size="24" fill="#1e1e1e"><tspan x="818" dy="0">需要工具吗？</tspan></text>
+  <rect x="1038" y="166" width="250" height="90" rx="12" ry="12" fill="#e6fcf5" stroke="#1e1e1e" stroke-width="2"/>
+  <text x="1163" y="211" text-anchor="middle" dominant-baseline="middle" font-family="Segoe Print, Comic Sans MS, cursive" font-size="24" fill="#1e1e1e"><tspan x="1163" dy="0">模型输出</tspan><tspan x="1163" dy="30">工具名 + 参数JSON</tspan></text>
+  <rect x="1038" y="336" width="250" height="90" rx="12" ry="12" fill="#ffe8cc" stroke="#1e1e1e" stroke-width="2"/>
+  <text x="1163" y="381" text-anchor="middle" dominant-baseline="middle" font-family="Segoe Print, Comic Sans MS, cursive" font-size="24" fill="#1e1e1e"><tspan x="1163" dy="0">应用代码</tspan><tspan x="1163" dy="30">真正执行函数</tspan></text>
+  <rect x="1378" y="166" width="250" height="90" rx="12" ry="12" fill="#d3f9d8" stroke="#1e1e1e" stroke-width="2"/>
+  <text x="1503" y="211" text-anchor="middle" dominant-baseline="middle" font-family="Segoe Print, Comic Sans MS, cursive" font-size="24" fill="#1e1e1e"><tspan x="1503" dy="0">模型整合结果</tspan><tspan x="1503" dy="30">回答用户</tspan></text>
+  <path d="M 158 211 L 478 211" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrowhead)"/>
+  <text x="318" y="187" text-anchor="middle" dominant-baseline="middle" font-family="Segoe Print, Comic Sans MS, cursive" font-size="18" fill="#1e1e1e"><tspan x="318" dy="0">提出需求</tspan></text>
+  <path d="M 478 376 L 478 211" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrowhead)"/>
+  <text x="478" y="269.5" text-anchor="middle" dominant-baseline="middle" font-family="Segoe Print, Comic Sans MS, cursive" font-size="18" fill="#1e1e1e"><tspan x="478" dy="0">给模型可用工具</tspan></text>
+  <path d="M 478 211 L 818 211" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrowhead)"/>
+  <text x="648" y="187" text-anchor="middle" dominant-baseline="middle" font-family="Segoe Print, Comic Sans MS, cursive" font-size="18" fill="#1e1e1e"><tspan x="648" dy="0">判断</tspan></text>
+  <path d="M 818 211 L 1163 211" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrowhead)"/>
+  <text x="990.5" y="187" text-anchor="middle" dominant-baseline="middle" font-family="Segoe Print, Comic Sans MS, cursive" font-size="18" fill="#1e1e1e"><tspan x="990.5" dy="0">是：生成调用参数</tspan></text>
+  <path d="M 1163 211 L 1163 381" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrowhead)"/>
+  <text x="1163" y="272" text-anchor="middle" dominant-baseline="middle" font-family="Segoe Print, Comic Sans MS, cursive" font-size="18" fill="#1e1e1e"><tspan x="1163" dy="0">开发者解析</tspan></text>
+  <path d="M 1163 381 L 1503 211" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrowhead)"/>
+  <text x="1333" y="272" text-anchor="middle" dominant-baseline="middle" font-family="Segoe Print, Comic Sans MS, cursive" font-size="18" fill="#1e1e1e"><tspan x="1333" dy="0">工具结果回填</tspan></text>
+  <text x="58" y="696" text-anchor="start" dominant-baseline="hanging" font-family="Segoe Print, Comic Sans MS, cursive" font-size="24" fill="#1e1e1e"><tspan x="58" dy="0">关键记忆：模型不直接执行函数；模型负责选择工具并生成参数，应用负责执行。</tspan></text>
+</svg>
