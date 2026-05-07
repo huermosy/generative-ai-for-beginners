@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1046" height="722" viewBox="0 0 1046 722">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M 0 0 L 10 4 L 0 8 z" fill="#1e1e1e"/>
+    </marker>
+  </defs>
+  <rect width="100%" height="100%" fill="#fffdf8"/>
+  <text x="318" y="48" text-anchor="middle" dominant-baseline="hanging" font-family="Segoe Print, Comic Sans MS, cursive" font-size="38" fill="#1e1e1e"><tspan x="318" dy="0">W2D2：上下文是什么</tspan></text>
+  <rect x="338" y="274" width="300" height="130" rx="12" ry="12" fill="#e7f5ff" stroke="#1e1e1e" stroke-width="2"/>
+  <text x="488" y="324" text-anchor="middle" dominant-baseline="middle" font-family="Segoe Print, Comic Sans MS, cursive" font-size="24" fill="#1e1e1e"><tspan x="488" dy="0">上下文</tspan><tspan x="488" dy="30">模型回答前的背景信息</tspan></text>
+  <rect x="48" y="144" width="260" height="110" rx="12" ry="12" fill="#fff3bf" stroke="#1e1e1e" stroke-width="2"/>
+  <text x="178" y="184" text-anchor="middle" dominant-baseline="middle" font-family="Segoe Print, Comic Sans MS, cursive" font-size="24" fill="#1e1e1e"><tspan x="178" dy="0">任务上下文</tspan><tspan x="178" dy="30">这次要做什么</tspan></text>
+  <rect x="738" y="144" width="260" height="110" rx="12" ry="12" fill="#d3f9d8" stroke="#1e1e1e" stroke-width="2"/>
+  <text x="868" y="184" text-anchor="middle" dominant-baseline="middle" font-family="Segoe Print, Comic Sans MS, cursive" font-size="24" fill="#1e1e1e"><tspan x="868" dy="0">用户上下文</tspan><tspan x="868" dy="30">答案给谁看</tspan></text>
+  <rect x="48" y="474" width="260" height="110" rx="12" ry="12" fill="#ffe3e3" stroke="#1e1e1e" stroke-width="2"/>
+  <text x="178" y="514" text-anchor="middle" dominant-baseline="middle" font-family="Segoe Print, Comic Sans MS, cursive" font-size="24" fill="#1e1e1e"><tspan x="178" dy="0">资料上下文</tspan><tspan x="178" dy="30">依据哪些材料</tspan></text>
+  <rect x="738" y="474" width="260" height="110" rx="12" ry="12" fill="#e5dbff" stroke="#1e1e1e" stroke-width="2"/>
+  <text x="868" y="514" text-anchor="middle" dominant-baseline="middle" font-family="Segoe Print, Comic Sans MS, cursive" font-size="24" fill="#1e1e1e"><tspan x="868" dy="0">对话上下文</tspan><tspan x="868" dy="30">前面聊过什么</tspan></text>
+  <path d="M 308 204 L 408 292" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrowhead)"/>
+  <path d="M 738 204 L 628 292" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrowhead)"/>
+  <path d="M 308 529 L 408 394" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrowhead)"/>
+  <path d="M 738 529 L 628 394" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrowhead)"/>
+  <text x="138" y="664" text-anchor="start" dominant-baseline="hanging" font-family="Segoe Print, Comic Sans MS, cursive" font-size="28" fill="#1e1e1e"><tspan x="138" dy="0">记忆点：不是信息越多越好，而是越相关越好。</tspan></text>
+</svg>
