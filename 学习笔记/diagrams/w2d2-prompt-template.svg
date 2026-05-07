@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="860" viewBox="0 0 1200 860">
+  <rect width="1200" height="860" fill="#fffdf8"/>
+  <g stroke="#2d2d2d" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M112 84 C264 58, 946 58, 1088 88"/>
+    <path d="M110 86 C96 202, 96 660, 114 776"/>
+    <path d="M1088 88 C1102 210, 1100 660, 1084 776"/>
+    <path d="M114 776 C336 804, 858 804, 1084 774"/>
+
+    <path d="M164 150 C302 126, 474 126, 560 150"/>
+    <path d="M164 150 C150 186, 150 224, 164 260"/>
+    <path d="M560 150 C572 186, 572 224, 558 260"/>
+    <path d="M164 260 C288 282, 438 282, 558 260"/>
+
+    <path d="M164 284 C302 260, 474 260, 560 286"/>
+    <path d="M164 286 C150 322, 150 360, 164 396"/>
+    <path d="M560 286 C572 322, 572 360, 558 396"/>
+    <path d="M164 396 C288 418, 438 418, 558 396"/>
+
+    <path d="M164 420 C302 396, 474 396, 560 422"/>
+    <path d="M164 422 C150 458, 150 496, 164 532"/>
+    <path d="M560 422 C572 458, 572 496, 558 532"/>
+    <path d="M164 532 C288 554, 438 554, 558 532"/>
+
+    <path d="M164 556 C302 532, 474 532, 560 558"/>
+    <path d="M164 558 C150 594, 150 632, 164 668"/>
+    <path d="M560 558 C572 594, 572 632, 558 668"/>
+    <path d="M164 668 C288 690, 438 690, 558 668"/>
+
+    <path d="M164 692 C302 668, 474 668, 560 694"/>
+    <path d="M164 694 C150 730, 150 754, 164 778"/>
+    <path d="M560 694 C572 730, 572 754, 558 778"/>
+    <path d="M164 778 C288 796, 438 796, 558 776"/>
+
+    <path d="M640 226 C762 198, 946 202, 1040 228"/>
+    <path d="M640 228 C628 292, 630 394, 644 458"/>
+    <path d="M1040 228 C1054 292, 1056 394, 1040 458"/>
+    <path d="M644 458 C764 484, 912 484, 1040 456"/>
+
+    <path d="M684 558 C760 536, 912 536, 988 560"/>
+    <path d="M684 560 C674 598, 674 636, 686 674"/>
+    <path d="M988 560 C1000 598, 1000 636, 988 674"/>
+    <path d="M686 674 C782 694, 892 694, 988 672"/>
+
+    <path d="M560 204 C612 214, 640 238, 670 278"/>
+    <path d="M560 340 C612 342, 640 342, 676 338"/>
+    <path d="M560 476 C612 466, 640 442, 670 408"/>
+    <path d="M560 612 C610 604, 636 596, 680 592"/>
+    <path d="M560 736 C612 712, 642 674, 682 640"/>
+
+    <path d="M664 272 l14 16 l-20 2"/>
+    <path d="M670 338 l14 -10 l0 18"/>
+    <path d="M664 406 l18 -10 l-2 18"/>
+    <path d="M676 592 l16 -10 l0 18"/>
+    <path d="M678 640 l18 -8 l-2 18"/>
+  </g>
+
+  <g fill="#2d2d2d" font-family="Virgil, Segoe Print, Comic Sans MS, cursive">
+    <text x="600" y="66" text-anchor="middle" font-size="34" font-weight="700">W2D2 图 2：Prompt 模板长什么样</text>
+
+    <text x="360" y="198" text-anchor="middle" font-size="30" font-weight="700">1. 角色</text>
+    <text x="360" y="234" text-anchor="middle" font-size="22">你是谁</text>
+
+    <text x="360" y="334" text-anchor="middle" font-size="30" font-weight="700">2. 任务</text>
+    <text x="360" y="370" text-anchor="middle" font-size="22">这次具体要做什么</text>
+
+    <text x="360" y="470" text-anchor="middle" font-size="30" font-weight="700">3. 用户背景</text>
+    <text x="360" y="506" text-anchor="middle" font-size="22">答案是给谁看的</text>
+
+    <text x="360" y="606" text-anchor="middle" font-size="30" font-weight="700">4. 上下文资料</text>
+    <text x="360" y="642" text-anchor="middle" font-size="22">模型依赖的材料</text>
+
+    <text x="360" y="740" text-anchor="middle" font-size="30" font-weight="700">5. 输出要求</text>
+    <text x="360" y="772" text-anchor="middle" font-size="22">格式 + 限制条件</text>
+
+    <text x="840" y="274" text-anchor="middle" font-size="34" font-weight="700">模板化 Prompt</text>
+    <text x="840" y="320" text-anchor="middle" font-size="24">把稳定部分固定下来</text>
+    <text x="840" y="356" text-anchor="middle" font-size="24">把变化部分做成变量</text>
+    <text x="840" y="392" text-anchor="middle" font-size="24">同类任务可以反复复用</text>
+
+    <text x="836" y="602" text-anchor="middle" font-size="32" font-weight="700">结果</text>
+    <text x="836" y="638" text-anchor="middle" font-size="22">更稳定</text>
+    <text x="836" y="666" text-anchor="middle" font-size="22">更贴题</text>
+    <text x="836" y="694" text-anchor="middle" font-size="22">更容易持续优化</text>
+  </g>
+</svg>

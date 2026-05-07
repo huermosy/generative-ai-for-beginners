@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+  <rect width="1200" height="760" fill="#fffdf8"/>
+  <g stroke="#2d2d2d" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M90 84 C242 58, 970 58, 1112 86"/>
+    <path d="M88 86 C74 206, 74 566, 92 676"/>
+    <path d="M1112 86 C1126 206, 1126 566, 1110 676"/>
+    <path d="M92 676 C310 704, 882 704, 1110 674"/>
+
+    <path d="M128 150 C248 124, 522 124, 606 150"/>
+    <path d="M128 152 C114 220, 114 560, 130 628"/>
+    <path d="M606 150 C620 220, 620 560, 604 628"/>
+    <path d="M130 628 C282 652, 454 652, 604 626"/>
+
+    <path d="M694 150 C820 126, 1024 126, 1080 150"/>
+    <path d="M694 152 C680 220, 680 560, 696 628"/>
+    <path d="M1080 150 C1092 220, 1092 560, 1078 628"/>
+    <path d="M696 628 C826 650, 948 650, 1078 626"/>
+
+    <path d="M170 206 C242 184, 456 186, 530 208"/>
+    <path d="M170 208 C160 246, 160 270, 172 300"/>
+    <path d="M530 208 C542 244, 542 270, 530 300"/>
+    <path d="M172 300 C290 318, 410 318, 530 298"/>
+
+    <path d="M170 328 C242 304, 456 304, 530 330"/>
+    <path d="M170 330 C160 368, 160 392, 172 422"/>
+    <path d="M530 330 C542 366, 542 392, 530 422"/>
+    <path d="M172 422 C290 438, 410 438, 530 420"/>
+
+    <path d="M170 450 C242 426, 456 426, 530 452"/>
+    <path d="M170 452 C160 490, 160 514, 172 544"/>
+    <path d="M530 452 C542 488, 542 514, 530 544"/>
+    <path d="M172 544 C290 560, 410 560, 530 542"/>
+
+    <path d="M730 222 C816 198, 980 198, 1036 222"/>
+    <path d="M730 224 C720 300, 720 412, 734 500"/>
+    <path d="M1036 222 C1048 298, 1048 412, 1034 498"/>
+    <path d="M734 500 C826 522, 948 522, 1034 498"/>
+
+    <path d="M610 300 C646 300, 672 300, 698 300"/>
+    <path d="M682 288 l20 12 l-20 12"/>
+  </g>
+
+  <g fill="#2d2d2d" font-family="Virgil, Segoe Print, Comic Sans MS, cursive">
+    <text x="600" y="64" text-anchor="middle" font-size="34" font-weight="700">W2D2 图 4：聊天应用里的上下文管理</text>
+
+    <text x="366" y="194" text-anchor="middle" font-size="32" font-weight="700">原始历史消息</text>
+    <text x="350" y="240" text-anchor="middle" font-size="22">第 1 轮：自我介绍</text>
+    <text x="350" y="274" text-anchor="middle" font-size="22">第 2 轮：问别的话题</text>
+    <text x="350" y="360" text-anchor="middle" font-size="22">第 3 轮：回到当前任务</text>
+    <text x="350" y="394" text-anchor="middle" font-size="22">第 4 轮：补了一些背景</text>
+    <text x="350" y="480" text-anchor="middle" font-size="22">第 5 轮：夹杂无关闲聊</text>
+    <text x="350" y="514" text-anchor="middle" font-size="22">第 6 轮：真正的问题来了</text>
+
+    <text x="884" y="204" text-anchor="middle" font-size="32" font-weight="700">保留“相关的”上下文</text>
+    <text x="884" y="256" text-anchor="middle" font-size="22">保留：</text>
+    <text x="884" y="292" text-anchor="middle" font-size="22">当前任务目标</text>
+    <text x="884" y="326" text-anchor="middle" font-size="22">用户水平与偏好</text>
+    <text x="884" y="360" text-anchor="middle" font-size="22">最近几轮关键约束</text>
+    <text x="884" y="412" text-anchor="middle" font-size="22">删掉或压缩：</text>
+    <text x="884" y="446" text-anchor="middle" font-size="22">无关闲聊</text>
+    <text x="884" y="480" text-anchor="middle" font-size="22">过旧信息</text>
+    <text x="884" y="514" text-anchor="middle" font-size="22">重复信息</text>
+
+    <text x="600" y="590" text-anchor="middle" font-size="26" font-weight="700">上下文管理不是“全保留”，而是“保留当前任务真正需要的”。</text>
+  </g>
+</svg>

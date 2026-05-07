@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+  <rect width="1200" height="760" fill="#fffdf8"/>
+  <g stroke="#2d2d2d" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M114 104 C258 78, 944 82, 1088 110"/>
+    <path d="M112 106 C96 216, 94 520, 114 652"/>
+    <path d="M1086 108 C1106 230, 1102 520, 1082 650"/>
+    <path d="M114 652 C320 684, 856 684, 1080 648"/>
+
+    <path d="M452 244 C516 216, 678 216, 748 244"/>
+    <path d="M450 246 C438 320, 438 418, 452 490"/>
+    <path d="M748 244 C762 322, 760 416, 746 490"/>
+    <path d="M452 490 C538 514, 660 514, 746 490"/>
+
+    <path d="M152 156 C256 130, 408 134, 476 158"/>
+    <path d="M150 158 C138 214, 140 290, 154 340"/>
+    <path d="M478 158 C488 216, 490 286, 474 340"/>
+    <path d="M154 340 C252 362, 378 362, 474 340"/>
+
+    <path d="M724 156 C836 132, 974 132, 1044 158"/>
+    <path d="M722 158 C712 216, 712 286, 726 340"/>
+    <path d="M1044 158 C1058 220, 1058 286, 1040 340"/>
+    <path d="M726 340 C816 360, 948 362, 1040 338"/>
+
+    <path d="M150 420 C260 396, 398 396, 474 420"/>
+    <path d="M148 422 C140 484, 142 558, 156 612"/>
+    <path d="M474 420 C488 482, 488 558, 470 612"/>
+    <path d="M156 612 C258 632, 380 632, 470 610"/>
+
+    <path d="M724 420 C832 394, 972 394, 1044 422"/>
+    <path d="M722 422 C710 486, 712 556, 726 612"/>
+    <path d="M1042 422 C1056 486, 1056 558, 1040 610"/>
+    <path d="M726 612 C820 632, 950 632, 1040 608"/>
+
+    <path d="M480 248 C420 230, 360 208, 318 186"/>
+    <path d="M718 248 C786 228, 844 206, 882 188"/>
+    <path d="M480 486 C422 512, 360 532, 316 552"/>
+    <path d="M718 486 C786 510, 846 532, 882 550"/>
+
+    <path d="M308 178 l20 6 l-10 14"/>
+    <path d="M892 182 l-20 8 l12 12"/>
+    <path d="M310 556 l18 -8 l-8 -14"/>
+    <path d="M892 548 l-18 -8 l8 -12"/>
+  </g>
+
+  <g fill="#2d2d2d" font-family="Virgil, Segoe Print, Comic Sans MS, cursive">
+    <text x="600" y="70" text-anchor="middle" font-size="34" font-weight="700">W2D2 图 1：上下文到底是什么</text>
+    <text x="600" y="286" text-anchor="middle" font-size="38" font-weight="700">上下文</text>
+    <text x="600" y="328" text-anchor="middle" font-size="24">模型回答前，你补充给它的背景信息</text>
+    <text x="600" y="362" text-anchor="middle" font-size="24">不是多说几句，而是给“判断方向”</text>
+
+    <text x="314" y="208" text-anchor="middle" font-size="30" font-weight="700">任务上下文</text>
+    <text x="314" y="246" text-anchor="middle" font-size="22">这次要做什么</text>
+    <text x="314" y="280" text-anchor="middle" font-size="22">总结 / 解释 / 出题 / 写代码</text>
+
+    <text x="884" y="208" text-anchor="middle" font-size="30" font-weight="700">用户上下文</text>
+    <text x="884" y="246" text-anchor="middle" font-size="22">答案是给谁看的</text>
+    <text x="884" y="280" text-anchor="middle" font-size="22">初学者 / 专家 / 中文 / 面试导向</text>
+
+    <text x="314" y="470" text-anchor="middle" font-size="30" font-weight="700">资料上下文</text>
+    <text x="314" y="508" text-anchor="middle" font-size="22">模型回答要依赖什么材料</text>
+    <text x="314" y="542" text-anchor="middle" font-size="22">文章 / 规则 / README / 产品清单</text>
+
+    <text x="884" y="470" text-anchor="middle" font-size="30" font-weight="700">对话上下文</text>
+    <text x="884" y="508" text-anchor="middle" font-size="22">前面几轮已经聊过什么</text>
+    <text x="884" y="542" text-anchor="middle" font-size="22">当前问题是在延续哪个主题</text>
+
+    <text x="600" y="692" text-anchor="middle" font-size="26" font-weight="700">一句话记忆：没有上下文，模型只能泛泛地猜；有了上下文，模型才能更精准地收敛。</text>
+  </g>
+</svg>

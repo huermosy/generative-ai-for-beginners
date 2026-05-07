@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <rect width="1200" height="700" fill="#fffdf8"/>
+  <g stroke="#2d2d2d" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M80 78 C232 52, 972 52, 1120 82"/>
+    <path d="M78 80 C62 188, 62 538, 82 620"/>
+    <path d="M1120 82 C1138 196, 1138 542, 1116 620"/>
+    <path d="M82 620 C286 648, 922 648, 1118 618"/>
+
+    <path d="M132 154 C250 126, 446 126, 520 154"/>
+    <path d="M130 156 C118 226, 120 438, 136 522"/>
+    <path d="M520 154 C534 226, 534 438, 518 522"/>
+    <path d="M136 522 C256 546, 396 546, 518 520"/>
+
+    <path d="M682 154 C806 126, 1006 126, 1070 154"/>
+    <path d="M680 156 C668 226, 670 438, 686 522"/>
+    <path d="M1070 154 C1084 226, 1084 438, 1068 522"/>
+    <path d="M686 522 C806 548, 948 548, 1068 520"/>
+
+    <path d="M562 340 C608 340, 640 340, 676 340"/>
+    <path d="M660 328 l20 12 l-20 12"/>
+  </g>
+
+  <g fill="#2d2d2d" font-family="Virgil, Segoe Print, Comic Sans MS, cursive">
+    <text x="600" y="62" text-anchor="middle" font-size="34" font-weight="700">W2D2 图 3：普通提问 vs 模板化提问</text>
+
+    <text x="326" y="198" text-anchor="middle" font-size="32" font-weight="700">普通提问</text>
+    <text x="326" y="244" text-anchor="middle" font-size="24">“请解释什么是 Prompt 模板”</text>
+    <text x="326" y="302" text-anchor="middle" font-size="24">优点：快</text>
+    <text x="326" y="336" text-anchor="middle" font-size="24">缺点：范围太宽</text>
+    <text x="326" y="370" text-anchor="middle" font-size="24">不知道给谁讲</text>
+    <text x="326" y="404" text-anchor="middle" font-size="24">不知道输出要多长</text>
+    <text x="326" y="438" text-anchor="middle" font-size="24">不知道用什么结构</text>
+    <text x="326" y="494" text-anchor="middle" font-size="28" font-weight="700">结果：回答容易飘</text>
+
+    <text x="876" y="198" text-anchor="middle" font-size="32" font-weight="700">模板化提问</text>
+    <text x="876" y="244" text-anchor="middle" font-size="24">角色 + 任务 + 用户背景</text>
+    <text x="876" y="278" text-anchor="middle" font-size="24">上下文 + 输出格式 + 限制条件</text>
+    <text x="876" y="336" text-anchor="middle" font-size="24">知道在回答谁</text>
+    <text x="876" y="370" text-anchor="middle" font-size="24">知道要回答到什么深度</text>
+    <text x="876" y="404" text-anchor="middle" font-size="24">知道结果该长什么样</text>
+    <text x="876" y="438" text-anchor="middle" font-size="24">知道边界和重点</text>
+    <text x="876" y="494" text-anchor="middle" font-size="28" font-weight="700">结果：回答更稳、更贴题</text>
+
+    <text x="600" y="580" text-anchor="middle" font-size="26" font-weight="700">真正的提升，不在“更会提问”，而在“更会给约束”。</text>
+  </g>
+</svg>
