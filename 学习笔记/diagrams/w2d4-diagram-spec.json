@@ -1,0 +1,99 @@
+{
+  "outputDir": "学习笔记/diagrams",
+  "diagrams": [
+    {
+      "file": "w2d4-checkin-app-overview.excalidraw",
+      "title": "W2D4：Check-in 助手 v1 总览",
+      "nodes": [
+        { "id": "user", "type": "rect", "x": 80, "y": 180, "w": 220, "h": 90, "text": "学习者\n输入今天问题", "fill": "#d9f0ff" },
+        { "id": "ui", "type": "rect", "x": 360, "y": 180, "w": 240, "h": 90, "text": "网页表单 / 聊天框\n收集 message", "fill": "#fff3bf" },
+        { "id": "api", "type": "rect", "x": 670, "y": 180, "w": 240, "h": 90, "text": "Flask /api/chat\n接收请求", "fill": "#ffe8cc" },
+        { "id": "prompt", "type": "rect", "x": 980, "y": 100, "w": 260, "h": 110, "text": "系统提示词\n学习教练 + 输出结构", "fill": "#e9fac8" },
+        { "id": "model", "type": "rect", "x": 980, "y": 270, "w": 260, "h": 110, "text": "LLM\n生成学习建议", "fill": "#ffd8e8" },
+        { "id": "reply", "type": "rect", "x": 1310, "y": 180, "w": 240, "h": 90, "text": "返回 reply\n展示给用户", "fill": "#d3f9d8" }
+      ],
+      "edges": [
+        { "from": "user", "to": "ui", "label": "输入", "labelDy": -24 },
+        { "from": "ui", "to": "api", "label": "POST /api/chat", "labelDy": -24 },
+        { "from": "api", "to": "prompt", "label": "拼装 messages", "fromSide": "right", "toSide": "left", "fromOffset": -18 },
+        { "from": "prompt", "to": "model", "label": "约束回答格式", "fromSide": "bottom", "toSide": "top" },
+        { "from": "api", "to": "model", "label": "chat.completions.create", "fromSide": "right", "toSide": "left", "fromOffset": 18 },
+        { "from": "model", "to": "reply", "label": "reply 文本", "labelDy": -24 },
+        { "from": "reply", "to": "ui", "label": "渲染结果", "fromSide": "bottom", "toSide": "bottom", "waypoints": [ { "x": 1430, "y": 420 }, { "x": 480, "y": 420 } ], "labelPoint": { "x": 970, "y": 438 } }
+      ],
+      "notes": [
+        "目标：先把“输入 -> 处理 -> 输出”的闭环跑通，不急着一次做完 Notion 自动写入。",
+        "W2D4 的重点是让小应用 v1 真正可运行，而不是只停留在 Prompt 草稿。"
+      ]
+    },
+    {
+      "file": "w2d4-request-flow-v1.excalidraw",
+      "title": "W2D4：小应用 v1 请求流程",
+      "nodes": [
+        { "id": "input", "type": "rect", "x": 80, "y": 170, "w": 220, "h": 90, "text": "用户输入问题", "fill": "#d9f0ff" },
+        { "id": "validate", "type": "diamond", "x": 390, "y": 145, "w": 220, "h": 140, "text": "message\n是否为空？", "fill": "#fff3bf" },
+        { "id": "error", "type": "rect", "x": 700, "y": 60, "w": 230, "h": 90, "text": "返回 400\nmessage is required", "fill": "#ffc9c9" },
+        { "id": "key", "type": "diamond", "x": 700, "y": 220, "w": 230, "h": 140, "text": "是否有\nOpenAI Key？", "fill": "#ffe8cc" },
+        { "id": "fallback", "type": "rect", "x": 1030, "y": 80, "w": 240, "h": 90, "text": "本地回退模式\n先保证流程可跑", "fill": "#f3d9fa" },
+        { "id": "model", "type": "rect", "x": 1030, "y": 255, "w": 240, "h": 90, "text": "调用模型\n生成学习回复", "fill": "#e9fac8" },
+        { "id": "json", "type": "rect", "x": 1360, "y": 170, "w": 220, "h": 90, "text": "JSON { reply }\n返回前端", "fill": "#d3f9d8" }
+      ],
+      "edges": [
+        { "from": "input", "to": "validate", "label": "POST", "labelDy": -24 },
+        { "from": "validate", "to": "error", "label": "否", "fromSide": "right", "toSide": "left", "fromOffset": -34, "toOffset": 10 },
+        { "from": "validate", "to": "key", "label": "是", "fromSide": "right", "toSide": "left", "fromOffset": 34, "toOffset": -10 },
+        { "from": "key", "to": "fallback", "label": "无 Key", "fromSide": "right", "toSide": "left", "fromOffset": -30 },
+        { "from": "key", "to": "model", "label": "有 Key", "fromSide": "right", "toSide": "left", "fromOffset": 30 },
+        { "from": "fallback", "to": "json", "label": "reply", "labelDy": -24 },
+        { "from": "model", "to": "json", "label": "reply", "labelDy": -24 }
+      ],
+      "notes": [
+        "W1D3 现有代码已经具备这个 v1 结构：输入校验、模型调用、本地回退、统一 JSON 输出。",
+        "如果今天只实现到这里，W2D4 就已经达成“可运行 v1”的核心目标。"
+      ]
+    },
+    {
+      "file": "w2d4-checkin-prompt-contract.excalidraw",
+      "title": "W2D4：Check-in 提示词契约",
+      "nodes": [
+        { "id": "sys", "type": "rect", "x": 80, "y": 150, "w": 260, "h": 110, "text": "System\n你是一名中文 AI 学习教练", "fill": "#d9f0ff" },
+        { "id": "slots", "type": "rect", "x": 420, "y": 90, "w": 300, "h": 230, "text": "输入槽位\n- 学习者背景\n- 今日任务\n- 关联仓库章节\n- 当前进度\n- 用户提问", "fill": "#fff3bf", "align": "left", "textDx": -90 },
+        { "id": "format", "type": "rect", "x": 800, "y": 90, "w": 300, "h": 230, "text": "输出结构\n1. 今天关键点\n2. 最小练习\n3. 下一步建议\n4. 风险提醒", "fill": "#e9fac8", "align": "left", "textDx": -70 },
+        { "id": "user", "type": "rect", "x": 420, "y": 380, "w": 300, "h": 110, "text": "User message\n例如：我今天该先看哪段代码？", "fill": "#ffe8cc" },
+        { "id": "reply", "type": "rect", "x": 800, "y": 380, "w": 300, "h": 110, "text": "Reply\n适合初学者、结构稳定、可执行", "fill": "#d3f9d8" }
+      ],
+      "edges": [
+        { "from": "sys", "to": "slots", "label": "定义角色与口吻", "labelDy": -24 },
+        { "from": "slots", "to": "format", "label": "形成完整提示", "labelDy": -24 },
+        { "from": "user", "to": "format", "label": "补变量", "fromSide": "top", "toSide": "bottom" },
+        { "from": "format", "to": "reply", "label": "约束输出", "fromSide": "bottom", "toSide": "top" }
+      ],
+      "notes": [
+        "W2D4 的 Prompt 不该只是“随便问一句”，而要把 W2D2 的模板意识真正落进应用代码里。",
+        "先把输出结构固定下来，后面接 Notion、函数调用和测试都会轻松很多。"
+      ]
+    },
+    {
+      "file": "w2d4-v1-to-v2-roadmap.excalidraw",
+      "title": "W2D4：从 v1 到 W2D5 的演进",
+      "nodes": [
+        { "id": "v1", "type": "rect", "x": 80, "y": 180, "w": 240, "h": 100, "text": "W2D4 v1\n能输入\n能处理\n能输出", "fill": "#d3f9d8" },
+        { "id": "err", "type": "rect", "x": 420, "y": 80, "w": 260, "h": 100, "text": "异常处理\n空输入\n模型失败\n超时提示", "fill": "#ffc9c9" },
+        { "id": "params", "type": "rect", "x": 420, "y": 280, "w": 260, "h": 100, "text": "参数配置\n模型名\n温度\n系统提示词", "fill": "#fff3bf" },
+        { "id": "tests", "type": "rect", "x": 790, "y": 180, "w": 260, "h": 100, "text": "W2D5 样例测试\n5 到 10 组输入\n对比输出质量", "fill": "#d9f0ff" },
+        { "id": "readme", "type": "rect", "x": 1160, "y": 180, "w": 260, "h": 100, "text": "W2D6 README\n说明场景、输入输出、运行方式", "fill": "#ffe8cc" }
+      ],
+      "edges": [
+        { "from": "v1", "to": "err", "label": "补稳定性", "labelDy": -24 },
+        { "from": "v1", "to": "params", "label": "补可配置", "labelDy": -24 },
+        { "from": "err", "to": "tests", "label": "验证错误场景", "fromSide": "right", "toSide": "left", "fromOffset": 10 },
+        { "from": "params", "to": "tests", "label": "比较配置差异", "fromSide": "right", "toSide": "left", "fromOffset": -10 },
+        { "from": "tests", "to": "readme", "label": "整理成果", "labelDy": -24 }
+      ],
+      "notes": [
+        "W2D4 不是孤立的一天，它是 Week 2 真正开始“做应用”的起点。",
+        "v1 的标准很朴素：能跑通；v2 的标准才是更稳、更可配、更能展示。"
+      ]
+    }
+  ]
+}
