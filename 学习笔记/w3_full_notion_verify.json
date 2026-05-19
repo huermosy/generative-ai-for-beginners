@@ -1,0 +1,86 @@
+[
+  {
+    "order": 15,
+    "title": "W3D1 RAG 与向量数据库入门",
+    "status": "Done",
+    "repo_url": "https://github.com/datawhalechina/llm-universe",
+    "prop_has_mojibake": false,
+    "row_marker": true,
+    "image_marker": true,
+    "image_blocks": 2,
+    "child_count": 55,
+    "url": "https://www.notion.so/W3D1-RAG-356f3acbeab381e89c06d99419b1d557"
+  },
+  {
+    "order": 16,
+    "title": "W3D2 文档切分实验",
+    "status": "Done",
+    "repo_url": "https://github.com/datawhalechina/llm-universe",
+    "prop_has_mojibake": false,
+    "row_marker": true,
+    "image_marker": true,
+    "image_blocks": 2,
+    "child_count": 56,
+    "url": "https://www.notion.so/W3D2-356f3acbeab381e8b1bec3125d79d24b"
+  },
+  {
+    "order": 17,
+    "title": "W3D3 向量入库检索",
+    "status": "Done",
+    "repo_url": "https://github.com/datawhalechina/llm-universe",
+    "prop_has_mojibake": false,
+    "row_marker": true,
+    "image_marker": true,
+    "image_blocks": 2,
+    "child_count": 69,
+    "url": "https://www.notion.so/W3D3-356f3acbeab38186bbaee1215df803f0"
+  },
+  {
+    "order": 18,
+    "title": "W3D4 问答链路串联",
+    "status": "Not started",
+    "repo_url": "https://github.com/datawhalechina/llm-universe",
+    "prop_has_mojibake": false,
+    "row_marker": true,
+    "image_marker": true,
+    "image_blocks": 2,
+    "child_count": 84,
+    "url": "https://www.notion.so/W3D4-356f3acbeab3810a88dcc8b311418982"
+  },
+  {
+    "order": 19,
+    "title": "W3D5 错误分析",
+    "status": "Not started",
+    "repo_url": "https://github.com/datawhalechina/llm-universe",
+    "prop_has_mojibake": false,
+    "row_marker": true,
+    "image_marker": true,
+    "image_blocks": 2,
+    "child_count": 68,
+    "url": "https://www.notion.so/W3D5-356f3acbeab381f48fbee3d255d0abad"
+  },
+  {
+    "order": 20,
+    "title": "W3D6 项目与流程图产出",
+    "status": "Not started",
+    "repo_url": "https://github.com/datawhalechina/llm-universe",
+    "prop_has_mojibake": false,
+    "row_marker": true,
+    "image_marker": true,
+    "image_blocks": 2,
+    "child_count": 65,
+    "url": "https://www.notion.so/W3D6-356f3acbeab381369da7e867fb4a5d56"
+  },
+  {
+    "order": 21,
+    "title": "W3D7 周复盘",
+    "status": "Not started",
+    "repo_url": "https://github.com/datawhalechina/llm-universe",
+    "prop_has_mojibake": false,
+    "row_marker": true,
+    "image_marker": true,
+    "image_blocks": 2,
+    "child_count": 71,
+    "url": "https://www.notion.so/W3D7-356f3acbeab381d98e83faac5c89977b"
+  }
+]
